@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Kanit:wght@500&family=Open+Sans:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* Global Start  */
+:root {
+    --transition : 0.5s;
+    --green-color : #088178; 
+    --padding : 80px
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p {
+    color: #465b52;
+    margin: 15px 0 20px;
+}
+
+.p1 {
+    padding: 40px 80px;
+}
+
+.m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global End  */
+/* Header Start  */
+header {
+    overflow: hidden;
+    background-color: #E3E6F3;
+    padding: 20px var(--padding);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header nav img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+header nav ul li {
+    padding: 10px 20px;
+}
+
+header nav ul li a {
+    color: #1a1a1a;
+    display: block;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+}
+
+header nav ul li a:hover ,
+header nav ul li a.active{
+    color: var(--green-color);
+}
+header nav ul li a.active::after,
+header nav ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+    height: 2px;
+    transition: var(--transition);
+}
+header nav ul li a.active::after{
+    width: 70%;
+}
+header nav ul li a::after {
+    width: 0%;
+}
+header nav ul li a:hover::after{
+    width: 70%;
+
+}
+
+/* Header End  */
+/* Landing Page Start  */
+.landing {
+    height: 90vh;
+    background-image: url(../Image/hero4.png);
+    background-position: top 25% right 0;
+    background-size:cover;
+    padding:  0 var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.landing .landing-desc h2 , 
+.landing .landing-desc h4, 
+.landing .landing-desc h1 {
+    font-weight: 700;
+}
+.landing .landing-desc h4 {
+    padding-bottom: 15px;
+}
+.landing .landing-desc h1 {
+    color: var(--green-color);
+}
+.landing .landing-desc .shop {
+    background-image: url(../Image/button.png);
+    padding: 12px 80px 9px 65px;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.landing .landing-desc .shop button {
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    color: var(--green-color);
+    padding: 2px;
+    transition: 0.5s;
+}
+.landing .landing-desc .shop:hover {
+    transform: scale(1.1);
+}
+.landing .landing-desc .shop:hover button {
+    color: black;
+}
+
+/* Landing Page End  */
+/* Feature Start  */
+
+.features .features-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.features .features-items .f-box {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 20px;
+    box-shadow: 5px 20px 34px rgba( 0,0,0,10%);
+    border-radius: 5px;
+    border: 2px solid #cce7d0;
+    transition: 0.3s;
+}
+.features .features-items .f-box:hover {
+    box-shadow: 5px 10px 54px rgba( 70,62,221,10%);
+    transform: translateY(-5px);
+}
+.features .features-items .f-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.features .features-items .f-box h6 {
+    padding: 9px 8px;
+    background-color: #fddde4;
+    color: var(--green-color);
+    border-radius: 5px;
+    line-height: 1;
+    letter-spacing: .8px;
+}
+/* Feature End  */

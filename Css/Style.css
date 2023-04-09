@@ -25,7 +25,17 @@ li {
 a {
     text-decoration: none;
 }
-
+a.normal {
+        display: block;
+        color: black;
+        background-color: white;
+        width: fit-content;
+        font-weight: 700;
+        padding: 12px 30px;
+        border-radius: 5px;
+        transition: var(--transition);
+    
+}
 h1 {
     font-size: 50px;
     line-height: 64px;
@@ -77,6 +87,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
 header nav {
@@ -225,4 +236,254 @@ header nav ul li a:hover::after{
     line-height: 1;
     letter-spacing: .8px;
 }
+.features .features-items .f-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+}
+.features .features-items .f-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+.features .features-items .f-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+.features .features-items .f-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+.features .features-items .f-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
 /* Feature End  */
+/* Fisrt Products Start  */
+.products .h-products {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.products .h-products h2 {
+font-weight: 700;
+}
+.products .h-products p {
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+.products .b-products .item-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+.products .b-products .item-products .p-box {
+    border: 2px solid #cce7d0;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.products .b-products .item-products .p-box:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+
+}
+.products .b-products .item-products .p-box img{
+    width: 100%;
+    border-radius: 20px;
+
+}
+.products .b-products .item-products .p-box span{
+    display: block;
+    margin:10px 0 5px;
+    color: #606063;
+}
+.products .b-products .item-products .p-box h5 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #1a1a1a;
+}
+.products .b-products .item-products .p-box .rate i{
+    color: rgb(243, 181, 25);
+}
+.products .b-products .item-products .p-box  .buying{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.products .b-products .item-products .p-box  .buying h4{
+    color: var(--green-color);
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 18px ;
+}
+.products .b-products .item-products .p-box  .buying i  {
+    color: var(--green-color);
+    background-color: #e8f6ea;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cce7d0;
+}
+
+/* Fisrt Products End  */
+/* Repair Start  */
+.repair {
+    text-align: center;
+    background-image: url(../Image/banner/b2.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.repair h4 {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0 ;
+
+}
+.repair h2 {
+    color: white;  
+    font-weight: bold;  
+    margin-bottom: 10px;
+    font-size: 40px;
+
+}
+.repair h2 span {
+    color: #ef3636;  
+
+}
+.repair a {
+    margin: auto;
+    margin-bottom: 20px;
+}
+.repair a:hover {
+    color: white;
+    background-color: var(--green-color);
+}
+/* Repair End  */
+/* Sales Start  */
+.crazy-deals {
+    display: flex;
+    gap: 4%;
+    align-items: center;
+    justify-content: center;
+}
+.crazy-deals .first-deal {
+    background-image: url(../Image/banner/b17.jpg);
+}
+.crazy-deals .second-deal {
+    background-image: url(../Image/banner/b10.jpg);
+
+}
+.crazy-deals .deal {
+    background-position: center;
+    background-size: cover;
+    padding: 80px 30px ;
+    flex-basis: 48%;
+    border-radius: 5px;
+}
+.crazy-deals .deal h4 {
+    font-weight: 500;
+    font-size: 22px;
+    color: white;
+}
+.crazy-deals .deal h2 {
+    color: white;
+    font-weight: 700;
+
+
+}
+.crazy-deals .deal h5 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.crazy-deals .deal a {
+    background-color: wheat;
+    display: block;
+    width: fit-content;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: var(--transition);
+    border-width: 1px;
+    border-style: solid;    
+}
+.crazy-deals .deal:nth-child(1) a {
+    background-color: var(--green-color);
+    border-color: transparent;
+}
+.crazy-deals .deal:nth-child(2) a {
+    background-color: transparent;
+    border-color: white;
+}
+.crazy-deals .deal:nth-child(1):hover a {
+    border-color: white;
+    background-color: transparent;
+}
+.crazy-deals .deal:nth-child(2):hover a {
+    background-color: var(--green-color);
+    border-color: transparent;
+}
+.sales {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+    gap: 30px;
+}
+
+
+.sales .sale::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+}
+.sales .sale1 {
+    background-image: url(../Image/banner/b7.jpg);
+}
+.sales .sale2 {
+    background-image: url(../Image/banner/b4.jpg);
+}
+.sales .sale3 {
+    background-image: url(../Image/banner/b18.jpg);
+}
+.sales .sale {
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 90px 20px;
+    position: relative;
+    transition: var(--transition);
+}
+.sales .sale:hover {
+    background-size: 110% 110%;
+}
+.sales .sale h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 22px;
+    color: white;
+    position: relative;
+}
+.sales .sale h6 {
+    color: #ef3636;
+    font-size: 15px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* Sales End  */
+/* Newsletters Start  */
+.newsletters {
+    background-image: url(../Image/banner/b14.png);
+    background-color: #041e42;
+}
+/* Newsletters End  */
+
+

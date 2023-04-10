@@ -443,7 +443,7 @@ font-weight: 700;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00000080;
+    background-color: #00000070;
 }
 .sales .sale1 {
     background-image: url(../Image/banner/b7.jpg);
@@ -483,6 +483,55 @@ font-weight: 700;
 .newsletters {
     background-image: url(../Image/banner/b14.png);
     background-color: #041e42;
+    background-position: 20% 30%;
+    background-repeat: no-repeat;
+}
+.newsletters .news-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+.signin-text {
+    flex: 1;
+}
+.newsletters .news-info .signin-text h3 {
+    color: white;
+    font-weight: 600;
+}
+.newsletters .news-info .signin-text p {
+    color: #818ea0;
+}
+.newsletters .news-info .signin-text p span {
+    color: #ffbd27;
+}
+.newsletters .news-info .form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+}
+.newsletters .news-info .form input {
+    height: 3.126rem;
+    width: 100%;
+    padding: 15px 30px;
+    border-top-left-radius:4px ;
+    border-bottom-left-radius:4px ;
+    border: 1px solid transparent;
+    outline: none;
+}
+.newsletters .news-info .form button {
+        display: block;
+        color: white;
+        background-color: var(--green-color);
+        width: fit-content;
+        font-weight: 700;
+        padding: 12.5px 30px;
+        transition: var(--transition);
+        border: 1px solid transparent;
+        white-space: nowrap;
+        border-top-right-radius:4px ;
+        border-bottom-right-radius:4px ;
 }
 /* Newsletters End  */
 

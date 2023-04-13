@@ -5,7 +5,6 @@
 :root {
     --transition: 0.5s;
     --green-color: #088178;
-    --padding: 80px
 }
 
 * {
@@ -70,6 +69,11 @@ p {
 .p1 {
     padding: 40px 80px;
 }
+@media screen and (max-width:992px) {
+    .p1 {
+        padding: 40px 30px;
+    }
+}
 
 .m1 {
     margin: 40px 0;
@@ -87,7 +91,7 @@ body {
 header {
     /* overflow: hidden; */
     background-color: #E3E6F3;
-    padding: 20px var(--padding);
+    padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
     position: sticky;
     top: 0;
@@ -97,6 +101,11 @@ header {
     align-items: center;
 }
 
+@media screen and (max-width:992px) {
+    header {
+        padding: 20px 30px;
+    }
+}
 header nav {
     display: flex;
     justify-content: space-between;
@@ -681,6 +690,8 @@ header nav ul li a:hover::after {
 
 .footer-section .footer {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: space-between;
 
 }

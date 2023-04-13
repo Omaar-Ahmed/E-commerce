@@ -69,6 +69,7 @@ p {
 .p1 {
     padding: 40px 80px;
 }
+
 @media screen and (max-width:992px) {
     .p1 {
         padding: 40px 30px;
@@ -106,6 +107,7 @@ header {
         padding: 20px 30px;
     }
 }
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -147,7 +149,7 @@ header nav ul.show {
         align-items: start;
         box-shadow: 0 40px 60px #00000010;
         overflow: hidden;
-        
+
     }
 }
 
@@ -202,19 +204,22 @@ header nav ul li a:hover::after {
     z-index: 5;
     transition: var(--transition);
 }
+
 @media screen and (min-width:992px) {
     .bars {
         display: none;
     }
 }
+
 .bar {
     width: 30px;
     height: 4px;
     background-color: black;
     transition: var(--transition);
 }
+
 .bars.active {
-    margin-right: 135px;
+    margin-right: 180px;
     transition: var(--transition);
 }
 
@@ -241,11 +246,13 @@ header nav ul li a:hover::after {
     background-image: url(../Image/hero4.png);
     background-position: top 25% right 0;
     background-size: cover;
-    padding: 0 var(--padding);
+    padding: 0 80px;
     display: flex;
     align-items: center;
     justify-content: start;
 }
+
+
 
 .landing .landing-desc h2,
 .landing .landing-desc h4,
@@ -259,6 +266,17 @@ header nav ul li a:hover::after {
 
 .landing .landing-desc h1 {
     color: var(--green-color);
+}
+@media screen and (max-width:992px) {
+
+    .landing {
+        height: 70vh;
+        padding: 0 80px 0 30px;
+        background-position: top 30% right 50%;
+    }
+    /* .landing .landing-desc h1 , .landing .landing-desc h2  {
+        font-size: 40px;
+    } */
 }
 
 .landing .landing-desc .shop {
@@ -487,8 +505,9 @@ header nav ul li a:hover::after {
 /* Repair End  */
 /* Sales Start  */
 .crazy-deals {
-    display: flex;
+    display: grid;
     gap: 4%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
 }
@@ -506,8 +525,13 @@ header nav ul li a:hover::after {
     background-position: center;
     background-size: cover;
     padding: 80px 30px;
-    flex-basis: 48%;
+    height: 350px;
     border-radius: 5px;
+}
+@media screen and (max-width:992px) {
+    .crazy-deals  {
+        grid-template-columns: 1fr;
+    }
 }
 
 .crazy-deals .deal h4 {
@@ -564,7 +588,7 @@ header nav ul li a:hover::after {
 
 .sales {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 
@@ -577,6 +601,7 @@ header nav ul li a:hover::after {
     width: 100%;
     height: 100%;
     background-color: #00000070;
+    border-radius: 5px;
 }
 
 .sales .sale1 {
@@ -590,6 +615,28 @@ header nav ul li a:hover::after {
 .sales .sale3 {
     background-image: url(../Image/banner/b18.jpg);
 }
+@media  (min-width:786px) and (max-width:992px) {
+    
+    .sales .sale1 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    
+    .sales .sale2 {
+        grid-column-start: 6;
+        grid-column-end: 12;
+    }
+    
+    .sales .sale3 {
+        grid-column-start: 1;
+        grid-column-end: 12;
+    }
+}
+@media (max-width:786px) {
+    .sales  {
+        grid-template-columns: 1fr;
+    }
+}
 
 .sales .sale {
     background-position: center;
@@ -597,6 +644,8 @@ header nav ul li a:hover::after {
     padding: 90px 20px;
     position: relative;
     transition: var(--transition);
+    border-radius: 5px;
+
 }
 
 .sales .sale:hover {
@@ -655,7 +704,6 @@ header nav ul li a:hover::after {
     flex: 1;
     display: flex;
     align-items: center;
-
 }
 
 .newsletters .news-info .form input {
@@ -681,6 +729,20 @@ header nav ul li a:hover::after {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
+@media (max-width:992px) {
+    .newsletters .news-info {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+    
+    .newsletters .news-info .form{
+        width: 100%;
+    }
+    .newsletters .news-info .form input{
+        width: 70%;
+    }
+}
 
 /* Newsletters End  */
 /* Footer Start  */
@@ -689,11 +751,19 @@ header nav ul li a:hover::after {
 }
 
 .footer-section .footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-between;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:50px;
+}
+@media (max-width:1200px) {
+    .footer-section .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:768px) {
+    .footer-section .footer {
+        grid-template-columns:  1fr;
+    }
 }
 
 .footer-section .footer a {
@@ -753,6 +823,7 @@ header nav ul li a:hover::after {
 .footer-section .footer .install img {
     margin-bottom: 30px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .footer-section .copy-right {

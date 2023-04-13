@@ -272,7 +272,7 @@ header nav ul li a:hover::after {
     .landing {
         height: 70vh;
         padding: 0 80px 0 30px;
-        background-position: top 30% right 50%;
+        background-position: top 30% right 30%;
     }
     /* .landing .landing-desc h1 , .landing .landing-desc h2  {
         font-size: 40px;
@@ -314,7 +314,7 @@ header nav ul li a:hover::after {
 
 .features .features-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 0.5fr));
     align-items: center;
     justify-content: center;
     gap: 20px;

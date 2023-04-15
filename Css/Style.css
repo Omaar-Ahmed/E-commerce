@@ -121,7 +121,6 @@ header nav ul {
 }
 
 @media screen and (max-width:992px) {
-    
     header nav ul {
         display: flex;
         position: fixed;
@@ -310,12 +309,11 @@ header nav ul li a:hover::after {
 
 .features .features-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 20px));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 20px));
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-
 .features .features-items .f-box {
     margin: 15px 0;
     display: flex;
@@ -329,7 +327,6 @@ header nav ul li a:hover::after {
     border: 2px solid #cce7d0;
     transition: 0.3s;
 }
-
 .features .features-items .f-box:hover {
     box-shadow: 5px 10px 54px rgba(70, 62, 221, 10%);
     transform: translateY(-5px);
@@ -389,7 +386,7 @@ header nav ul li a:hover::after {
 
 .products .b-products .item-products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px;
     margin-top: 40px;
 }

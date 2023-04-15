@@ -6,27 +6,22 @@
     --transition: 0.5s;
     --green-color: #088178;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
-
 ul {
     padding: 0;
     margin: 0;
 }
-
 li {
     list-style: none;
 }
-
 a {
     text-decoration: none;
 }
-
 a.normal {
     display: block;
     color: black;
@@ -36,9 +31,7 @@ a.normal {
     padding: 12px 30px;
     border-radius: 5px;
     transition: var(--transition);
-
 }
-
 h1 {
     font-size: 50px;
     line-height: 64px;
@@ -84,13 +77,13 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 
 /* Global End  */
 /* Header Start  */
 header {
-    /* overflow: hidden; */
     background-color: #E3E6F3;
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
@@ -127,31 +120,31 @@ header nav ul {
     transition: var(--transition);
 }
 
-header nav ul.show {
-    transition: var(--transition);
-    right: 0px;
-    padding: 80px 0 0 30px;
-    width: 300px;
-
-}
-
 @media screen and (max-width:992px) {
+    
     header nav ul {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        flex-direction: column;
-        background-color: #E3E6F3;
-        width: 0px;
-        height: 100vh;
-        text-align: center;
+        display: flex;
+        position: fixed;
+        flex-direction:column;
         justify-content: start;
-        align-items: start;
-        box-shadow: 0 40px 60px #00000010;
-        overflow: hidden;
-
+        width: 200px;
+        height: 100vh;
+        top: 80px;
+        right: -200px;
+        gap: 30px;
+        padding: 10px;
+        background-color: #E3E6F3;
+        transition: var(--transition);
+        box-shadow: 0 20px 10px #00000080;
     }
-}
+    header nav ul li {
+        padding: 0px 0px;
+    }
+    header nav ul.show {
+        right: 0;
+        transition: var(--transition);
+    }
+    }
 
 header nav ul li {
     padding: 10px 20px;
@@ -204,7 +197,6 @@ header nav ul li a:hover::after {
     z-index: 5;
     transition: var(--transition);
 }
-
 @media screen and (min-width:992px) {
     .bars {
         display: none;
@@ -215,11 +207,6 @@ header nav ul li a:hover::after {
     width: 30px;
     height: 4px;
     background-color: black;
-    transition: var(--transition);
-}
-
-.bars.active {
-    margin-right: 180px;
     transition: var(--transition);
 }
 
@@ -251,9 +238,6 @@ header nav ul li a:hover::after {
     align-items: center;
     justify-content: start;
 }
-
-
-
 .landing .landing-desc h2,
 .landing .landing-desc h4,
 .landing .landing-desc h1 {
@@ -268,15 +252,27 @@ header nav ul li a:hover::after {
     color: var(--green-color);
 }
 @media screen and (max-width:992px) {
-
     .landing {
         height: 70vh;
         padding: 0 80px 0 30px;
         background-position: top 30% right 30%;
     }
-    /* .landing .landing-desc h1 , .landing .landing-desc h2  {
-        font-size: 40px;
-    } */
+}
+@media (max-width:477px) {
+    .landing {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    .landing .landing-desc h4 {
+        font-size: 20px;
+    }
+    .landing .landing-desc h2 {
+        font-size: 32px;
+    }
+    .landing .landing-desc h1 {
+        font-size: 38px;
+    }
 }
 
 .landing .landing-desc .shop {
@@ -314,7 +310,7 @@ header nav ul li a:hover::after {
 
 .features .features-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 0.5fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 20px));
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -486,7 +482,11 @@ header nav ul li a:hover::after {
     font-size: 40px;
 
 }
-
+@media (max-width:477px) {
+    .repair h2 {
+        font-size: 24px;
+    }
+}
 .repair h2 span {
     color: #ef3636;
 
@@ -618,18 +618,17 @@ header nav ul li a:hover::after {
 @media  (min-width:786px) and (max-width:992px) {
     
     .sales .sale1 {
-        grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column: 1/6;
     }
     
     .sales .sale2 {
-        grid-column-start: 6;
-        grid-column-end: 12;
+        grid-column: 6/12;
+
     }
     
     .sales .sale3 {
-        grid-column-start: 1;
-        grid-column-end: 12;
+        grid-column-start: 2;
+        grid-column-end: 10;
     }
 }
 @media (max-width:786px) {

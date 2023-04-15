@@ -525,10 +525,10 @@ header nav ul li a:hover::after {
 }
 
 .crazy-deals .deal {
-    background-position: center;
+    background-position: right center;
     background-size: cover;
     padding: 80px 30px;
-    height: 350px;
+    height: 380px;
     border-radius: 5px;
 }
 @media screen and (max-width:992px) {

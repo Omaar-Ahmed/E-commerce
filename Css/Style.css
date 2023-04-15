@@ -267,10 +267,11 @@ header nav ul li a:hover::after {
         font-size: 20px;
     }
     .landing .landing-desc h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
     .landing .landing-desc h1 {
-        font-size: 38px;
+        font-size: 34px;
+        
     }
 }
 
@@ -377,6 +378,11 @@ header nav ul li a:hover::after {
 
 .products .h-products h2 {
     font-weight: 700;
+}
+@media (max-width:477px) {
+    .products .h-products h2 {
+        font-size: 33px;
+    }
 }
 
 .products .h-products p {

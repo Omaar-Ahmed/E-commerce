@@ -86,7 +86,7 @@ body {
 header {
     background-color: #E3E6F3;
     padding: 20px 80px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     left: 0;
@@ -260,7 +260,7 @@ header nav ul li a:hover::after {
 @media (max-width:477px) {
     .landing {
         padding: 0 20px;
-        background-position: 55%;
+        background-position: 0%;
     }
 
     .landing .landing-desc h4 {
@@ -770,6 +770,7 @@ header nav ul li a:hover::after {
 
 .footer-section .footer a {
     display: block;
+    width: fit-content;
     margin: 0 0 10px 20px;
     color: #222;
     position: relative;
@@ -821,11 +822,29 @@ header nav ul li a:hover::after {
     transform: scale(1.2);
     color: var(--green-color);
 }
-
+.footer-section .footer .install-img {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+@media (max-width:768px) {
+    .footer-section .footer .install-img {
+        display: flex;
+        justify-content: start;
+    }
+}
+@media (max-width:477px) {
+    .footer-section .footer .install-img {
+        display: flex;
+        justify-content: start;
+    }
+}
 .footer-section .footer .install img {
     margin-bottom: 30px;
     border-radius: 5px;
     cursor: pointer;
+    border: 2px solid var(--green-color);
 }
 
 .footer-section .copy-right {
@@ -836,3 +855,136 @@ header nav ul li a:hover::after {
 }
 
 /* Footer End  */
+/*------------------- Shoping Page Start -----------------*/
+/* Banner Start  */
+.shop-banner {
+    background-image: url(../Image/banner/b1.jpg);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.shop-banner h2 {
+    color: white;
+    font-weight: 600;
+}
+.shop-banner p {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+@media  (max-width:477px) {
+    .shop-banner h2 {
+        font-size: 30px;
+    }
+    .shop-banner p {
+        margin-top: 0px;
+    }
+}
+/* Banner End  */
+/* Pages-link Start  */
+.page-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 10px;
+}
+.page-products a {
+    background-color: var(--green-color);
+    padding: 12px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.page-products a:hover {
+    transform: scale(1.1);
+}
+/*------------------- Shoping Page End -----------------*/
+/*------------------- Single Product Page Start -----------------*/
+.proudct-detils {
+    display: flex;
+    justify-content: space-between;
+}
+
+.proudct-detils .single-product-img {
+    width: 40%;
+}
+.proudct-detils .single-product-details {
+    width: 55%;
+    padding-top: 30px;
+}
+@media (max-width:768px) {
+    .proudct-detils {
+        flex-direction: column;
+    }
+    .proudct-detils .single-product-img {
+        width: 100%;
+    }
+    .proudct-detils .single-product-details {
+        width: 100%;
+    }
+}
+.small-product-img {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.small-product-img .small-product-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+.proudct-detils .single-product-details h4 {
+    padding: 20px 0 15px 0 ;
+    font-weight: bold;
+    font-size: 25px;
+}
+.proudct-detils .single-product-details h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+.proudct-detils .single-product-details select{
+    padding: 5px 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+.proudct-detils .single-product-details input {
+    width: 50px;
+    height: 43px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right:10px ;
+}
+.proudct-detils .single-product-details input:focus {
+    outline: none;
+}
+.proudct-detils .single-product-details button{
+    border: none;
+    padding: 10px 25px;
+    background-color: var(--green-color);
+    color: white;
+    border-radius: 5px;
+    transition: var(--transition);
+    border-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    font-weight: bold;
+}
+.proudct-detils .single-product-details button:hover {
+    background-color: white;
+    border-color: var(--green-color);
+    color: var(--green-color);
+}
+.proudct-detils .single-product-details h4:nth-of-type(2) {
+    margin: 30px 0 10px;
+}
+.proudct-detils .single-product-details span {
+    line-height: 30px;
+    letter-spacing: 0.8px;
+}
+
+/*------------------- Single Product Page End -----------------*/
+
+

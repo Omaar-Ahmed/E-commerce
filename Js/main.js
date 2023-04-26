@@ -1,3 +1,4 @@
+// Menu Side Bar -------
 let menuBars = document.getElementById('bars');
 let linksNavBar = document.getElementById('links');
 menuBars.addEventListener("click", function(){
@@ -10,6 +11,12 @@ document.addEventListener('click', function (e) {
         linksNavBar.classList.remove('show');
     }
 })
+
+//Shop Page -------------
+let shopBtn = document.querySelector('#shopBtn'); 
+shopBtn.onclick = () => {
+    window.location.href = 'shop.html'
+}
 // Single Product Page ------------------------
 let mainImg = document.getElementById('mainImg'); 
 let smallImgs = document.getElementsByClassName('small-img') ; 
@@ -19,10 +26,10 @@ smallImgs[i].onclick = function() {
     mainImg.src = smallImgs[i].src ;
 }}
 
-
-let products = document.getElementsByClassName('boxOpen');
-console.log(products)
-for (let i=0 ; i < products.length ; i++) {
-products[i].onclick = function() {
-    window.location.href= 'sproduct.html';
-}}
+// let imgs = document.querySelectorAll('img')
+// let products = document.getElementsByClassName('boxOpen');
+// console.log(products)
+// for (let i=0 ; i < products.length ; i++) {
+// products[i].onclick = () => {
+//     window.location.href= 'sproduct.html';
+// }}

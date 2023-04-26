@@ -129,7 +129,7 @@ header nav ul {
         width: 200px;
         height: 100vh;
         top: 80px;
-        right: -200px;
+        right: -300px;
         gap: 30px;
         padding: 10px;
         background-color: #E3E6F3;
@@ -1143,10 +1143,11 @@ header nav ul li a:hover::after {
     }
 }
 
-About Page Start 
+/* About Page Start  */
 /* Contact Page Start  */
 .contact-body {
     display: flex;
+    justify-content: space-between;
 }
 .contact-body .details {
     width: 40%;
@@ -1180,14 +1181,15 @@ About Page Start
     padding-right: 10px;
 }
 .contact-body .map {
-    width: 55%;
+    width: 50%;
     height: 400px;
 }
 .contact-body .map iframe {
     width: 100%;
     height: 100%;
 }
-@media screen and (max-width:992px) {
+
+@media (max-width:992px) {
     .contact-body {
         flex-direction: column;
         gap: 30px;

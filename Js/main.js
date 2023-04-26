@@ -26,10 +26,10 @@ smallImgs[i].onclick = function() {
     mainImg.src = smallImgs[i].src ;
 }}
 
-// let imgs = document.querySelectorAll('img')
-// let products = document.getElementsByClassName('boxOpen');
-// console.log(products)
-// for (let i=0 ; i < products.length ; i++) {
-// products[i].onclick = () => {
-//     window.location.href= 'sproduct.html';
-// }}
+let imgs = document.querySelectorAll('img')
+let products = document.getElementsByClassName('boxOpen');
+console.log(products)
+for (let i=0 ; i < products.length ; i++) {
+products[i].onclick = () => {
+    window.location.href= 'sproduct.html';
+}}
